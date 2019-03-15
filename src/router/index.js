@@ -28,12 +28,12 @@ export default new Router({
       component: NewStudent
     },
     {
-      path: '/editTeacher/:employee_id',
+      path: '/EditTeacher/:employee_id',
       name: 'EditTeacher',
       component: EditTeacher
     },
     {
-      path: '/editStudent/:student_id',
+      path: '/EditStudent/:student_id',
       name: 'EditStudent',
       component: EditStudent
     },

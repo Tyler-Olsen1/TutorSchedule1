@@ -37,7 +37,7 @@
 <script>
 import db from './firebaseInit'
 export default {
-    name: 'new-teacher',
+    name: 'NewTeacher',
     data() {
         return {
             employee_id: null,

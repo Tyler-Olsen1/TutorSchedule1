@@ -10,19 +10,24 @@
         </ul>
         <router-link class="btn grey" to="/">Back</router-link>
         <button @click="deleteTeacher" class="btn red">Delete</button>
+        <div class="fixed-action-btn">
+            <router-link v-bind:to="{name: 'EditTeacher', params: {employee_id: employee_id}}" class="btn-floating btn-large red">
+                <i class="fa fa-pencil"></i>
+            </router-link>
+        </div>
     </div>
 </template>
 
 <script>
 import db from './firebaseInit'
 export default {
-    name: 'view-teacher',
+    name: 'ViewTeacher',
     data() {
         return {
             employee_id: null,
             name: null, 
-            dept: null, 
-            position: null
+            language: null, 
+            college: null
         }
     },
     beforeRouteEnter (to, from, next) {
@@ -49,7 +54,7 @@ export default {
                     this.employee_id = doc.data().employee_id
                     this.name = doc.data().name
                     this.language = doc.data().language
-                    this.collection = doc.data().college
+                    this.college = doc.data().college
                 })
             })
         },
@@ -59,7 +64,7 @@ export default {
             .then(querySnapshot => {
                 querySnapshot.forEach(doc => {
                 doc.ref.delete()
-                this.$router.push('/')
+                this.$router.push('/dashboard')
                 })
                 })
             }

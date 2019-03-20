@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn">Submit</button>
-                <router-link to="/" class="btn grey">Back</router-link>
+                <router-link to="/dashboard" class="btn grey">Back</router-link>
             </form>
         </div>
     </div>
@@ -37,7 +37,7 @@
 <script>
 import db from './firebaseInit'
 export default {
-    name: 'new-teacher',
+    name: 'NewTeacher',
     data() {
         return {
             employee_id: null,
@@ -54,7 +54,7 @@ export default {
                 language: this.language,
                 college: this.college
             })
-            .then(docRef => this.$router.push('/'))
+            .then(docRef => this.$router.push('/dashboard'))
             .catch(error => console.log(err))
         }
     }

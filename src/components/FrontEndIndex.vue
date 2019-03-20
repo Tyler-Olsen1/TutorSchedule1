@@ -4,7 +4,6 @@
             <li class="collection-header">
                 <h4>{{name}}</h4>
             </li>
-            <li class="collection-item">Student id#: {{student_id}}</li>
             <li class="collection-item">Grade: {{grade}}</li>
             <li class="collection-item">Language: {{language}}</li>
         </ul>
@@ -12,16 +11,15 @@
         <div class="studentInfo">
             <span>{{ studentInfo }}</span>
         </div>
-        <br>
-        <div class="buttons" align="right">
-        <router-link class="btn grey" to="/dashboard">Back</router-link>
-        <button @click="deleteStudent" class="btn red">Delete</button>
-        <div class="fixed-action-btn">
+        <!-- <br> -->
+        <!-- <div class="buttons" align="right"> -->
+        <!-- <router-link class="btn grey" to="/dashboard">Back</router-link> -->
+        <!-- <button @click="deleteStudent" class="btn red">Delete</button> -->
+        <!-- <div class="fixed-action-btn">
             <router-link v-bind:to="{name: 'EditStudent', params: {student_id: student_id}}" class="btn-floating btn-large red">
                 <i class="fa fa-pencil"></i>
             </router-link>
-        </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -67,19 +65,9 @@ export default {
                     this.studentInfo = doc.data().studentInfo
                 })
             })
-        },
-        deleteStudent () {
-            if(confirm("Are you sure?")) {
-            db.collection('students').where('student_id', '==', this.$route.params.student_id).get()
-            .then(querySnapshot => {
-                querySnapshot.forEach(doc => {
-                doc.ref.delete()
-                this.$router.push('/dashboard')
-                })
-                })
-            }
         }
-    }}
+    }
+}
 </script>
 
 <style scoped>

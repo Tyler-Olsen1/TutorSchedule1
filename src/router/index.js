@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import FrontEnd from '@/components/FrontEnd.vue';
+import FrontEndIndex from '@/components/FrontEndIndex';
 import Dashboard from '@/components/Dashboard.vue';
 import NewStudent from '@/components/NewStudent';
 import NewTeacher from '@/components/NewTeacher';
@@ -13,9 +15,19 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/FrontEnd',
+      name: 'FrontEnd',
+      component: FrontEnd
+    },
+    {
+      path: '/FrontEndIndex',
+      name: 'FrontEndIndex',
+      component: FrontEndIndex
     },
     {
       path: '/newTeacher',
@@ -28,12 +40,12 @@ export default new Router({
       component: NewStudent
     },
     {
-      path: '/editTeacher/:employee_id',
+      path: '/EditTeacher/:employee_id',
       name: 'EditTeacher',
       component: EditTeacher
     },
     {
-      path: '/editStudent/:student_id',
+      path: '/EditStudent/:student_id',
       name: 'EditStudent',
       component: EditStudent
     },

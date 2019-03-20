@@ -5,7 +5,7 @@
                 <li class="collection-header">
                     <h4>Teachers</h4>
                 </li>
-                <li v-for="teacher in teachers.slice(0,3)" v-bind:key="teacher.employee_id" class="collection-item">
+                <li v-for="teacher in teachers" v-bind:key="teacher.employee_id" class="collection-item">
                     <div class="chip">{{teacher.college}}</div>{{teacher.name}} | Employee#: {{teacher.employee_id}} | {{teacher.language}}
                     <router-link class="secondary-content" v-bind:to="{name: 'ViewTeacher', params: {employee_id: teacher.employee_id}}">
                         <i class="fa fa-eye"></i>
@@ -13,25 +13,7 @@
                 </li>
             </ul>
         </div>
-        <div class="students">
-            <ul class="collection with-header">
-                <li class="collection-header">
-                    <h4>Students</h4>
-                </li>
-                <li v-for="student in students.slice(0,3)" v-bind:key="student.student_id" class="collection-item">
-                    <div class="chip">{{student.grade}}</div>{{student.name}} | ({{student.language}})
-                    <router-link class="secondary-content" v-bind:to="{name: 'ViewStudent', params: {student_id: student.student_id}}">
-                        <i class="fa fa-eye"></i>
-                    </router-link>
-                </li>
-            </ul>
-        </div>
-
         <div class="fixed-action-btn">
-            <label for="NewStudent">New Student</label>
-            <router-link to='/NewStudent' id="NewStudent" class="btn-floating btn-large red">
-                <i class="fa fa-plus"></i>
-            </router-link>
             <label for="NewTeacher">New Teacher</label>
             <router-link to='/NewTeacher' id="NewTeacher" class="btn-floating btn-large red">
                 <i class="fa fa-plus"></i>

@@ -8,7 +8,7 @@
             <li class="collection-item">College: {{college}}</li>
             <li class="collection-item">Language: {{language}}</li>
         </ul>
-        <router-link class="btn grey" to="/">Back</router-link>
+        <router-link class="btn grey" to="/dashboard">Back</router-link>
         <button @click="deleteTeacher" class="btn red">Delete</button>
         <div class="fixed-action-btn">
             <router-link v-bind:to="{name: 'EditTeacher', params: {employee_id: employee_id}}" class="btn-floating btn-large red">

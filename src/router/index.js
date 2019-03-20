@@ -7,12 +7,15 @@ import NewStudent from '@/components/NewStudent';
 import NewTeacher from '@/components/NewTeacher';
 import ViewStudent from '@/components/ViewStudent';
 import ViewTeacher from '@/components/ViewTeacher';
+import ViewStudents from '@/components/ViewStudents';
+import ViewTeachers from '@/components/ViewTeachers';
 import EditStudent from '@/components/EditStudent';
 import EditTeacher from '@/components/EditTeacher';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/dashboard',
@@ -58,6 +61,17 @@ export default new Router({
       path: '/ViewStudent/:student_id',
       name: 'ViewStudent',
       component: ViewStudent
-    }
+    },
+    {
+      path: '/ViewTeachers',
+      name: 'ViewTeachers',
+      component: ViewTeachers
+    },
+    {
+      path: '/ViewStudents',
+      name: 'ViewStudents',
+      component: ViewStudents
+    },
+    
   ]
 });

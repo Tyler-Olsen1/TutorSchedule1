@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import FrontEnd from '@/components/FrontEnd.vue';
-import FrontEndIndex from '@/components/FrontEndIndex';
-import Dashboard from '@/components/Dashboard.vue';
+import FrontEnd from '@/components/FrontEnd/FrontEnd';
+import FrontEndIndex from '@/components/FrontEnd/FrontEndIndex';
+import Dashboard from '@/components/Dashboard';
 import NewStudent from '@/components/NewStudent';
 import NewTeacher from '@/components/NewTeacher';
 import ViewStudent from '@/components/ViewStudent';
@@ -72,6 +72,5 @@ export default new Router({
       name: 'ViewStudents',
       component: ViewStudents
     },
-    
   ]
 });

@@ -1,30 +1,33 @@
 <template>
     <div id="ViewStudent">
-        <ul class="collection with-header">
-            <li class="collection-header">
-                <h4>{{name}}</h4>
-            </li>
-            <li class="collection-item">Grade: {{grade}}</li>
-            <li class="collection-item">Language: {{language}}</li>
-        </ul>
+        <div>
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>{{name}}</h4>
+                </li>
+                <li class="collection-item">Grade: {{grade}}</li>
+                <li class="collection-item">Language: {{language}}</li>
+            </ul>
+        </div>
         Student information: 
         <div class="studentInfo">
             <span>{{ studentInfo }}</span>
         </div>
-        <!-- <br> -->
-        <!-- <div class="buttons" align="right"> -->
-        <!-- <router-link class="btn grey" to="/dashboard">Back</router-link> -->
-        <!-- <button @click="deleteStudent" class="btn red">Delete</button> -->
-        <!-- <div class="fixed-action-btn">
+        <br> 
+        <div class="buttons" align="right">
+        <router-link class="btn grey" to="/dashboard">Back</router-link>
+        <button @click="deleteStudent" class="btn red">Delete</button>
+        <div class="fixed-action-btn">
             <router-link v-bind:to="{name: 'EditStudent', params: {student_id: student_id}}" class="btn-floating btn-large red">
                 <i class="fa fa-pencil"></i>
             </router-link>
-        </div> -->
+        </div>
+    </div>
     </div>
 </template>
 
 <script>
-import db from './firebaseInit'
+import db from '../firebaseInit'
 export default {
     name: 'ViewStudent',
     data() {

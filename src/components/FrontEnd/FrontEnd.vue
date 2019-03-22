@@ -31,13 +31,13 @@
                 </div>
             </div>                    
             <button type="submit" class="btn">Submit</button>
-                <router-link to="/FrontEndIndex" class="btn grey">Back</router-link>
+                <router-link to="./FrontEndIndex" class="btn grey">Back</router-link>
             </form>
         </div>
     </div>
 </template>
 <script>
-import db from './firebaseInit'
+import db from '../firebaseInit.js'
 export default {
     name: 'FrontEnd',
     data() {

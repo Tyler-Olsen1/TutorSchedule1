@@ -9,8 +9,9 @@
 
 <script>
 import Navbar from './components/Navbar';
+import db from "./components/firebaseInit";
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     Navbar,
   }

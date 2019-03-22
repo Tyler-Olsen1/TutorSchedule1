@@ -56,7 +56,8 @@ export default {
         })
         .then(docRef => this.$router.push('/dashboard'))
         .catch(error => console.log(err))
-        }
+        },
+
     }
 }
 </script>

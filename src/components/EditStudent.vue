@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>Edit Student</h3>
-        <div class="row">
+        <div class="collection with-header">
             <form @submit.prevent="updateStudent" class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
@@ -10,7 +10,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" v-model="name" required>
+                        <input type="text" v-model="name" disabled>
                     </div>
                 </div>
                 <div class="row">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" v-model="grade" required>
+                        <input type="text" v-model="grade" disabled>
                     </div>
                 </div>
                 <div class="row">
@@ -54,7 +54,7 @@ export default {
                 next(vm => {
                     vm.student_id = doc.data().student_id
                     vm.name = doc.data().name
-                    vm.grade = doc.data().college
+                    vm.grade = doc.data().grade
                     vm.language = doc.data().language
                     vm.studentInfo = doc.data().studentInfo
                 })

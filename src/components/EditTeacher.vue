@@ -24,7 +24,11 @@
                     </div>
                 </div>
                 <button type="submit" class="btn">Submit</button>
+<<<<<<< HEAD
                 <router-link to="/dashboard" class="btn grey">Back</router-link>
+=======
+                <router-link to="/" class="btn grey">Back</router-link>
+>>>>>>> 00bdd6b2fdcf92b8d5b5c9f7b17f12a405084554
             </form>
         </div>
     </div>

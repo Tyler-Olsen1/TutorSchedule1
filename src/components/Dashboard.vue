@@ -5,11 +5,7 @@
                 <li class="collection-header">
                     <h4>Teachers</h4>
                 </li>
-<<<<<<< HEAD
                 <li v-for="teacher in teachers.slice(0,3)" v-bind:key="teacher.employee_id" class="collection-item">
-=======
-                <li v-for="teacher in teachers" v-bind:key="teacher.employee_id" class="collection-item">
->>>>>>> 00bdd6b2fdcf92b8d5b5c9f7b17f12a405084554
                     <div class="chip">{{teacher.college}}</div>{{teacher.name}} | Employee#: {{teacher.employee_id}} | {{teacher.language}}
                     <router-link class="secondary-content" v-bind:to="{name: 'ViewTeacher', params: {employee_id: teacher.employee_id}}">
                         <i class="fa fa-eye"></i>
@@ -22,13 +18,8 @@
                 <li class="collection-header">
                     <h4>Students</h4>
                 </li>
-<<<<<<< HEAD
                 <li v-for="student in students.slice(0,3)" v-bind:key="student.student_id" class="collection-item">
                     <div class="chip">{{student.grade}}</div>{{student.name}} | ({{student.language}})
-=======
-                <li v-for="student in students" v-bind:key="student.student_id" class="collection-item">
-                    <div class="chip">{{student.grade}}</div>{{student.name}}, ({{student.language}})
->>>>>>> 00bdd6b2fdcf92b8d5b5c9f7b17f12a405084554
                     <router-link class="secondary-content" v-bind:to="{name: 'ViewStudent', params: {student_id: student.student_id}}">
                         <i class="fa fa-eye"></i>
                     </router-link>

@@ -64,7 +64,7 @@ export default {
             .then(querySnapshot => {
                 querySnapshot.forEach(doc => {
                 doc.ref.delete()
-                this.$router.push('/dashboard')
+                this.$router.push('/ViewTeachers')
                 })
                 })
             }

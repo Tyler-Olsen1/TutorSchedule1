@@ -5,7 +5,7 @@
                 <h4>{{name}}</h4>
             </li>
             <li class="collection-item">Student id#: {{student_id}}</li>
-            <li class="collection-item">Grade: {{grade}}</li>
+            <li class="collection-item">Age: {{age}}</li>
             <li class="collection-item">Language: {{language}}</li>
         </ul>
         Student information: 
@@ -34,7 +34,7 @@ export default {
             student_id: null,
             name: null, 
             language: null, 
-            grade: null,
+            age: null,
             studentInfo: null
         }
     },
@@ -45,7 +45,7 @@ export default {
                 next(vm => {
                     vm.student_id = doc.data().student_id
                     vm.name = doc.data().name
-                    vm.grade = doc.data().grade
+                    vm.age = doc.data().age
                     vm.language = doc.data().language
                     vm.studentInfo = doc.data().studentInfo
                 })
@@ -74,7 +74,7 @@ export default {
             .then(querySnapshot => {
                 querySnapshot.forEach(doc => {
                 doc.ref.delete()
-                this.$router.push('/dashboard')
+                this.$router.push('/ViewStudents')
                 })
                 })
             }

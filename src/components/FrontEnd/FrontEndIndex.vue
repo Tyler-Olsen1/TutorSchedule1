@@ -35,7 +35,7 @@ export default {
             student_id: null,
             name: null, 
             language: null, 
-            grade: null,
+            age: null,
             studentInfo: null
         }
     },
@@ -46,7 +46,7 @@ export default {
                 next(vm => {
                     vm.student_id = doc.data().student_id
                     vm.name = doc.data().name
-                    vm.grade = doc.data().grade
+                    vm.age = doc.data().age
                     vm.language = doc.data().language
                     vm.studentInfo = doc.data().studentInfo
                 })
@@ -64,7 +64,7 @@ export default {
                     this.student_id = doc.data().student_id
                     this.name = doc.data().name
                     this.language = doc.data().language
-                    this.grade = doc.data().grade
+                    this.age = doc.data().age
                     this.studentInfo = doc.data().studentInfo
                 })
             })

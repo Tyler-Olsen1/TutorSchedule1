@@ -19,7 +19,7 @@
                     <h4>Students</h4>
                 </li>
                 <li v-for="student in students.slice(0,3)" v-bind:key="student.student_id" class="collection-item">
-                    <div class="chip">{{student.grade}}</div>{{student.name}} | ({{student.language}})
+                    <div class="chip">{{student.age}}</div>{{student.name}} | ({{student.language}})
                     <router-link class="secondary-content" v-bind:to="{name: 'ViewStudent', params: {student_id: student.student_id}}">
                         <i class="fa fa-eye"></i>
                     </router-link>
@@ -70,7 +70,7 @@ export default {
                     'id': doc.id,
                     'student_id': doc.data().student_id,
                     'name': doc.data().name,
-                    'grade': doc.data().grade,
+                    'age': doc.data().age,
                     'language': doc.data().language
                 }
                 this.students.push(data)

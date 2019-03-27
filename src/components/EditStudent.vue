@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" v-model="grade" disabled>
+                        <input type="text" v-model="age" required>
                     </div>
                 </div>
                 <div class="row">
@@ -54,7 +54,7 @@ export default {
                 next(vm => {
                     vm.student_id = doc.data().student_id
                     vm.name = doc.data().name
-                    vm.grade = doc.data().grade
+                    vm.age = doc.data().age
                     vm.language = doc.data().language
                     vm.studentInfo = doc.data().studentInfo
                 })
@@ -73,7 +73,7 @@ export default {
                     this.student_id = doc.data().student_id
                     this.name = doc.data().name
                     this.language = doc.data().language
-                    this.grade = doc.data().grade
+                    this.age = doc.data().age
                     this.studentInfo = doc.data().studentInfo
                 })
             })
@@ -86,7 +86,7 @@ export default {
                     doc.ref.update({
                         student_id: this.student_id,
                         name: this.name,
-                        grade: this.grade, 
+                        age: this.age, 
                         language: this.language,
                         studentInfo: this.studentInfo
                     })

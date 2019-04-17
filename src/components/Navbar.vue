@@ -8,16 +8,17 @@
                 <router-link to="/dashboard" class='brand-logo'>Teacher / Student Manager</router-link>
             </div>
             <div>
-                <a class='dropdown-trigger btn' dropdown-content="dropdown1" data-activates='dropdown1'>Students:</a>
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li id="student"><router-link to="./ViewStudents">View Students</router-link></li>
-                        <li id="student"><router-link to="./NewStudent">New Student</router-link></li>
-                    </ul>
-                <a class='dropdown-trigger btn' dropdown-content="dropdown2" data-activates='dropdown2'>Teachers:</a>
-                    <ul id='dropdown2' class='dropdown-content'>
+                <ul>
+                <!-- <a class='dropdown-trigger btn' dropdown-content="dropdown1" data-activates='dropdown1'>Students:</a>
+                    <ul id='dropdown1' class='dropdown-content'> -->
+                        <li><router-link to="./ViewStudents">View Students</router-link></li>
+                        <li><router-link to="./NewStudent">New Student</router-link></li>
+                    <!-- </ul> -->
+                <!-- <a class='dropdown-trigger btn' dropdown-content="dropdown2" data-activates='dropdown2'>Teachers:</a>
+                    <ul id='dropdown2' class='dropdown-content'> -->
                         <li><router-link to="./ViewTeachers">View Teachers</router-link></li>
                         <li><router-link to="./NewTeacher">New Teacher</router-link></li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
